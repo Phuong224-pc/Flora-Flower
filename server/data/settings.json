@@ -1,0 +1,32 @@
+{
+  "shop": {
+    "name": "Flora Flower",
+    "tagline": "Hoa tươi cao cấp TP.HCM",
+    "address": "123 Đường Hoa Hồng, Q.1, TP.HCM",
+    "phone": "0909 123 456",
+    "email": "hello@floraflower.vn",
+    "openHours": "08:00 – 21:00 (T2–CN)",
+    "facebook": "https://facebook.com/floraflower",
+    "instagram": "https://instagram.com/floraflower",
+    "logo": ""
+  },
+  "shipping": {
+    "fee": 30000,
+    "freeFrom": 500000,
+    "areas": [
+      "TP. Hồ Chí Minh"
+    ]
+  },
+  "bank": {
+    "bankCode": "MB",
+    "bankName": "MBBank",
+    "accountNumber": "22426287898355",
+    "accountName": "FLORA FLOWER",
+    "branch": "CN TP. HCM",
+    "transferNote": "FLORA {ORDER_ID}"
+  },
+  "order": {
+    "minAmount": 0,
+    "confirmTimeout": 30
+  }
+}

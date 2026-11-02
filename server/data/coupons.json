@@ -1,0 +1,38 @@
+[
+  {
+    "id": "43bebbde-1a07-42f0-ad2f-7fb7c6ee9623",
+    "code": "FLORA10",
+    "type": "percent",
+    "value": 10,
+    "minOrder": 200000,
+    "maxUses": 100,
+    "expiresAt": null,
+    "isActive": true,
+    "usedCount": 5,
+    "createdAt": "2026-10-05T12:58:44.532Z"
+  },
+  {
+    "id": "55658227-3f24-45b2-b1a2-0684e693bb9a",
+    "code": "FREESHIP",
+    "type": "fixed",
+    "value": 30000,
+    "minOrder": 300000,
+    "maxUses": 50,
+    "expiresAt": null,
+    "isActive": true,
+    "usedCount": 12,
+    "createdAt": "2026-10-05T12:58:44.537Z"
+  },
+  {
+    "id": "ea528da3-e1d7-4588-9df3-f16bdfb37272",
+    "code": "BIRTHDAY20",
+    "type": "percent",
+    "value": 20,
+    "minOrder": 500000,
+    "maxUses": 30,
+    "expiresAt": null,
+    "isActive": true,
+    "usedCount": 3,
+    "createdAt": "2026-10-05T12:58:44.538Z"
+  }
+]

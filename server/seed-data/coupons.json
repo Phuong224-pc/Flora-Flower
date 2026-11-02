@@ -1,0 +1,52 @@
+[
+  {
+    "code": "FLORA10",
+    "type": "percent",
+    "value": 10,
+    "minOrder": 200000,
+    "maxUses": 100,
+    "expiresAt": null,
+    "isActive": true,
+    "usedCount": 5
+  },
+  {
+    "code": "FREESHIP",
+    "type": "fixed",
+    "value": 30000,
+    "minOrder": 300000,
+    "maxUses": 50,
+    "expiresAt": null,
+    "isActive": true,
+    "usedCount": 12
+  },
+  {
+    "code": "BIRTHDAY20",
+    "type": "percent",
+    "value": 20,
+    "minOrder": 500000,
+    "maxUses": 30,
+    "expiresAt": null,
+    "isActive": true,
+    "usedCount": 3
+  },
+  {
+    "code": "SUMMER15",
+    "type": "percent",
+    "value": 15,
+    "minOrder": 350000,
+    "maxUses": 80,
+    "expiresAt": null,
+    "isActive": true,
+    "usedCount": 0
+  },
+  {
+    "code": "VALENTINE25",
+    "type": "percent",
+    "value": 25,
+    "minOrder": 600000,
+    "maxUses": 50,
+    "expiresAt": null,
+    "isActive": true,
+    "usedCount": 0
+  }
+]

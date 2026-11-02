@@ -1,0 +1,84 @@
+[
+  {
+    "id": "5dab4164-1329-4251-a626-b85cc434c85d",
+    "userId": "11cb9032-9e2f-48da-8979-96248cf65142",
+    "orderCode": "FFMUVF94MU184",
+    "items": [
+      {
+        "productId": "37444a9e-fbfc-456f-9a94-123d106c3abb",
+        "name": "Bó hoa cưới trắng thanh khiết",
+        "variantSize": "Cầm tay cô dâu",
+        "variantSKU": "WEDDING-HAND",
+        "price": 850000,
+        "quantity": 1,
+        "cardMessage": ""
+      },
+      {
+        "productId": "e477c8e2-4860-4137-bbd4-ac12865ba9aa",
+        "name": "Hộp hoa hồng sáp vĩnh cửu",
+        "variantSize": "Hộp tròn nhỏ (9 bông)",
+        "variantSKU": "ETERNAL-S",
+        "price": 450000,
+        "quantity": 1
+      }
+    ],
+    "recipient": {
+      "name": "Phương",
+      "phone": "0782379464",
+      "address": "123/7 tân hoàn đông"
+    },
+    "deliveryType": "delivery",
+    "deliveryDate": "2026-10-16",
+    "deliverySlot": "08:00-10:00",
+    "cardMessage": "đẹp",
+    "shopNote": "an toàm",
+    "paymentMethod": "bank_transfer",
+    "couponCode": "",
+    "couponId": null,
+    "subtotal": 1300000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "total": 1330000,
+    "status": "cancelled",
+    "paymentStatus": "unpaid",
+    "createdAt": "2026-10-05T15:45:51.803Z",
+    "updatedAt": "2026-10-05T15:46:01.588Z"
+  },
+  {
+    "id": "4df203d1-1d44-4852-97a1-8697f5dacf79",
+    "userId": "c64c5eee-0c2c-4715-87ad-22d253689ebe",
+    "orderCode": "FFMUXYQMYLGP3",
+    "items": [
+      {
+        "productId": "e477c8e2-4860-4137-bbd4-ac12865ba9aa",
+        "name": "Hộp hoa hồng sáp vĩnh cửu",
+        "image": "https://images.unsplash.com/photo-1548460848-d7b0da0e01e0?w=600&h=450&fit=crop",
+        "variantSize": "Hộp tròn nhỏ (9 bông)",
+        "variantSKU": "ETERNAL-S",
+        "price": 450000,
+        "quantity": 1,
+        "cardMessage": ""
+      }
+    ],
+    "recipient": {
+      "name": "Nguyen Thi Mai",
+      "phone": "0901234567",
+      "address": "123 Le Loi, Q.1, TP.HCM"
+    },
+    "deliveryType": "delivery",
+    "deliveryDate": "2026-10-15",
+    "deliverySlot": "08:00 – 10:00",
+    "cardMessage": "",
+    "shopNote": "",
+    "paymentMethod": "bank_transfer",
+    "couponCode": "",
+    "couponId": null,
+    "subtotal": 450000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "total": 480000,
+    "status": "pending",
+    "paymentStatus": "unpaid",
+    "createdAt": "2026-10-07T10:26:53.769Z"
+  }
+]

@@ -1,0 +1,470 @@
+[
+  {
+    "id": "9bc94a95-a1fd-4ca5-9b54-705ea1c91bd4",
+    "name": "Bó hoa hồng đỏ tình yêu",
+    "slug": "bo-hoa-hong-do-tinh-yeu",
+    "description": "Bó hoa hồng đỏ tươi thắm, biểu tượng của tình yêu nồng nàn. Được chọn lọc từ những bông hồng nhập khẩu chất lượng cao, mỗi bông đều nở rộ và thơm ngát.",
+    "type": "Bó hoa",
+    "occasion": [
+      "Tình yêu",
+      "Sinh nhật",
+      "Chúc mừng"
+    ],
+    "flowerType": "Hồng",
+    "images": [
+      "https://images.unsplash.com/photo-1548460848-d7b0da0e01e0?w=600&h=450&fit=crop",
+      "https://images.unsplash.com/photo-1487530811015-780b21f4f0e5?w=600&h=450&fit=crop"
+    ],
+    "isFeatured": true,
+    "status": "active",
+    "soldCount": 128,
+    "averageRating": 4.8,
+    "reviewCount": 32,
+    "originalPrice": 350000,
+    "variants": [
+      {
+        "size": "Nhỏ (10 bông)",
+        "price": 250000,
+        "stock": 20,
+        "sku": "ROSE-RED-S"
+      },
+      {
+        "size": "Vừa (20 bông)",
+        "price": 350000,
+        "stock": 15,
+        "sku": "ROSE-RED-M"
+      },
+      {
+        "size": "Lớn (30 bông)",
+        "price": 500000,
+        "stock": 10,
+        "sku": "ROSE-RED-L"
+      }
+    ],
+    "components": "10/20/30 bông hồng đỏ nhập khẩu, lá baby xanh, dải lụa trang trí",
+    "careInstructions": "Cắt bớt gốc 1-2cm, đặt trong bình nước sạch. Thay nước mỗi 1-2 ngày, tránh ánh nắng trực tiếp.",
+    "createdAt": "2026-10-05T12:59:45.766Z"
+  },
+  {
+    "id": "d2410df3-6116-40a5-82ad-996ae730ba0e",
+    "name": "Giỏ hoa hướng dương rực rỡ",
+    "slug": "gio-hoa-huong-duong-ruc-ro",
+    "description": "Giỏ hoa hướng dương tươi sáng, mang năng lượng tích cực và niềm vui. Thiết kế giỏ mây tự nhiên sang trọng, phù hợp làm quà tặng khai trương, sinh nhật.",
+    "type": "Giỏ hoa",
+    "occasion": [
+      "Sinh nhật",
+      "Khai trương",
+      "Chúc mừng"
+    ],
+    "flowerType": "Hướng dương",
+    "images": [
+      "https://images.unsplash.com/photo-1490750967868-88df5691cc56?w=600&h=450&fit=crop",
+      "https://images.unsplash.com/photo-1470509037663-253d2d33c3f8?w=600&h=450&fit=crop"
+    ],
+    "isFeatured": true,
+    "status": "active",
+    "soldCount": 95,
+    "averageRating": 4.7,
+    "reviewCount": 28,
+    "variants": [
+      {
+        "size": "Tiêu chuẩn",
+        "price": 320000,
+        "stock": 18,
+        "sku": "SUN-BASKET-S"
+      },
+      {
+        "size": "Cao cấp",
+        "price": 480000,
+        "stock": 10,
+        "sku": "SUN-BASKET-L"
+      }
+    ],
+    "components": "7-10 hoa hướng dương tươi, cúc vạn thọ, lá xanh phối, giỏ mây tự nhiên",
+    "createdAt": "2026-10-05T12:59:45.769Z"
+  },
+  {
+    "id": "a6f06cd2-20ed-4ffa-a341-f33986e38039",
+    "name": "Hộp hoa hồng pastel sinh nhật",
+    "slug": "hop-hoa-hong-pastel-sinh-nhat",
+    "description": "Hộp hoa hồng pastel nhẹ nhàng, ngọt ngào. Thiết kế hộp kraft hiện đại, bên trong là những bông hồng pastel hồng phấn, lavender và trắng kem xen kẽ cùng hoa bi trắng.",
+    "type": "Hộp hoa",
+    "occasion": [
+      "Sinh nhật",
+      "Tình yêu",
+      "Cảm ơn"
+    ],
+    "flowerType": "Hồng",
+    "images": [
+      "https://images.unsplash.com/photo-1444930694458-01babf71ab65?w=600&h=450&fit=crop",
+      "https://images.unsplash.com/photo-1490750967868-88df5691cc56?w=600&h=450&fit=crop"
+    ],
+    "isFeatured": true,
+    "status": "active",
+    "soldCount": 156,
+    "averageRating": 4.9,
+    "reviewCount": 45,
+    "variants": [
+      {
+        "size": "Mini (16 bông)",
+        "price": 280000,
+        "stock": 25,
+        "sku": "PASTEL-BOX-S"
+      },
+      {
+        "size": "Medium (25 bông)",
+        "price": 420000,
+        "stock": 18,
+        "sku": "PASTEL-BOX-M"
+      },
+      {
+        "size": "Grand (36 bông)",
+        "price": 620000,
+        "stock": 8,
+        "sku": "PASTEL-BOX-L"
+      }
+    ],
+    "components": "Hồng pastel, hoa bi, lá baby, hộp kraft cao cấp, giấy lụa",
+    "createdAt": "2026-10-05T12:59:45.772Z"
+  },
+  {
+    "id": "bb53ddea-3d0a-48a5-8fa0-abd1cd0174d2",
+    "name": "Kệ hoa khai trương thịnh vượng",
+    "slug": "ke-hoa-khai-truong-thinh-vuong",
+    "description": "Kệ hoa khai trương hoành tráng, sang trọng. Kết hợp hoa lay ơn, hoa cúc, hồng và hướng dương trên khung kệ chắc chắn. Mang ý nghĩa chúc mừng phát đạt, thịnh vượng.",
+    "type": "Kệ hoa",
+    "occasion": [
+      "Khai trương",
+      "Chúc mừng"
+    ],
+    "flowerType": "Hoa phối",
+    "images": [
+      "https://images.unsplash.com/photo-1485637701894-09ad422f6de6?w=600&h=450&fit=crop",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&fit=crop"
+    ],
+    "isFeatured": true,
+    "status": "active",
+    "soldCount": 72,
+    "averageRating": 4.8,
+    "reviewCount": 19,
+    "variants": [
+      {
+        "size": "Đơn kệ (1.2m)",
+        "price": 650000,
+        "stock": 10,
+        "sku": "STAND-OPEN-S"
+      },
+      {
+        "size": "Đôi kệ (1.4m)",
+        "price": 1200000,
+        "stock": 6,
+        "sku": "STAND-OPEN-L"
+      }
+    ],
+    "createdAt": "2026-10-05T12:59:45.773Z"
+  },
+  {
+    "id": "37444a9e-fbfc-456f-9a94-123d106c3abb",
+    "name": "Bó hoa cưới trắng thanh khiết",
+    "slug": "bo-hoa-cuoi-trang-thanh-khiet",
+    "description": "Bó hoa cưới cầm tay thiết kế tinh tế với hoa hồng trắng, hoa lan trắng và hoa phụ xanh nhẹ. Tạo nên vẻ đẹp thuần khiết, lãng mạn cho ngày trọng đại.",
+    "type": "Bó hoa",
+    "occasion": [
+      "Cưới"
+    ],
+    "flowerType": "Hoa phối",
+    "images": [
+      "https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?w=600&h=450&fit=crop",
+      "https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=600&h=450&fit=crop"
+    ],
+    "isFeatured": true,
+    "status": "active",
+    "soldCount": 44,
+    "averageRating": 5,
+    "reviewCount": 15,
+    "variants": [
+      {
+        "size": "Cầm tay cô dâu",
+        "price": 850000,
+        "stock": 8,
+        "sku": "WEDDING-HAND"
+      },
+      {
+        "size": "Bộ đầy đủ (cô dâu + phù dâu)",
+        "price": 1500000,
+        "stock": 5,
+        "sku": "WEDDING-SET"
+      }
+    ],
+    "createdAt": "2026-10-05T12:59:45.776Z",
+    "updatedAt": "2026-10-05T15:45:51.808Z"
+  },
+  {
+    "id": "30eed7ba-e9d8-4e71-9796-8e1cd1d92aeb",
+    "name": "Bình hoa tulip đa sắc",
+    "slug": "binh-hoa-tulip-da-sac",
+    "description": "Bình hoa tulip đa màu sắc tươi tắn, mang đến không gian sống thêm phần rực rỡ. Gồm nhiều màu tulip tím, hồng, vàng và trắng, cắm trong bình thủy tinh sang trọng.",
+    "type": "Bình hoa",
+    "occasion": [
+      "Sinh nhật",
+      "Chúc mừng",
+      "Cảm ơn"
+    ],
+    "flowerType": "Tulip",
+    "images": [
+      "https://images.unsplash.com/photo-1490750967868-88df5691cc56?w=600&h=450&fit=crop",
+      "https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=600&h=450&fit=crop"
+    ],
+    "isFeatured": false,
+    "status": "active",
+    "soldCount": 61,
+    "averageRating": 4.6,
+    "reviewCount": 22,
+    "variants": [
+      {
+        "size": "Nhỏ (15 bông + bình)",
+        "price": 380000,
+        "stock": 12,
+        "sku": "TULIP-VASE-S"
+      },
+      {
+        "size": "Lớn (25 bông + bình)",
+        "price": 580000,
+        "stock": 8,
+        "sku": "TULIP-VASE-L"
+      }
+    ],
+    "createdAt": "2026-10-05T12:59:45.777Z"
+  },
+  {
+    "id": "80e216be-00a9-47a4-b182-8e1e15da4151",
+    "name": "Bó hoa chia buồn cúc trắng",
+    "slug": "bo-hoa-chia-buon-cuc-trang",
+    "description": "Bó hoa chia buồn cúc trắng và hoa ly trắng trang nhã, thể hiện sự chia sẻ chân thành. Thiết kế giản dị mà thanh lịch, gói giấy kraft trắng tinh tế.",
+    "type": "Bó hoa",
+    "occasion": [
+      "Chia buồn"
+    ],
+    "flowerType": "Hoa phối",
+    "images": [
+      "https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?w=600&h=450&fit=crop",
+      "https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=600&h=450&fit=crop"
+    ],
+    "isFeatured": false,
+    "status": "active",
+    "soldCount": 38,
+    "averageRating": 4.7,
+    "reviewCount": 12,
+    "variants": [
+      {
+        "size": "Tiêu chuẩn",
+        "price": 280000,
+        "stock": 15,
+        "sku": "SYMPATHY-S"
+      },
+      {
+        "size": "Trang trọng",
+        "price": 450000,
+        "stock": 10,
+        "sku": "SYMPATHY-L"
+      }
+    ],
+    "createdAt": "2026-10-05T12:59:45.779Z"
+  },
+  {
+    "id": "bb45558e-3fac-41f7-8253-ab5ba9203972",
+    "name": "Hộp hoa cảm ơn thầy cô",
+    "slug": "hop-hoa-cam-on-thay-co",
+    "description": "Hộp hoa tươi sang trọng dành tặng thầy cô với thông điệp tri ân. Kết hợp hoa cúc vàng, hoa hồng và cẩm chướng đầy ý nghĩa, đựng trong hộp giấy cao cấp có nắp trong suốt.",
+    "type": "Hộp hoa",
+    "occasion": [
+      "Cảm ơn",
+      "Sinh nhật"
+    ],
+    "flowerType": "Hoa phối",
+    "images": [
+      "https://images.unsplash.com/photo-1485637701894-09ad422f6de6?w=600&h=450&fit=crop",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&fit=crop"
+    ],
+    "isFeatured": false,
+    "status": "active",
+    "soldCount": 84,
+    "averageRating": 4.8,
+    "reviewCount": 30,
+    "variants": [
+      {
+        "size": "Nhỏ",
+        "price": 250000,
+        "stock": 20,
+        "sku": "THANKYOU-S"
+      },
+      {
+        "size": "Vừa",
+        "price": 380000,
+        "stock": 15,
+        "sku": "THANKYOU-M"
+      },
+      {
+        "size": "Lớn",
+        "price": 550000,
+        "stock": 8,
+        "sku": "THANKYOU-L"
+      }
+    ],
+    "createdAt": "2026-10-05T12:59:45.780Z"
+  },
+  {
+    "id": "f1ed30fa-3467-46d0-836c-34081034fda8",
+    "name": "Bó hoa tốt nghiệp rực rỡ",
+    "slug": "bo-hoa-tot-nghiep-ruc-ro",
+    "description": "Bó hoa tốt nghiệp sắc màu rực rỡ, chúc mừng thành tích học tập xuất sắc. Kết hợp hoa hướng dương, hồng vàng, cúc và hoa phụ đầy màu sắc.",
+    "type": "Bó hoa",
+    "occasion": [
+      "Chúc mừng",
+      "Cảm ơn"
+    ],
+    "flowerType": "Hoa phối",
+    "images": [
+      "https://images.unsplash.com/photo-1485637701894-09ad422f6de6?w=600&h=450&fit=crop",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&fit=crop"
+    ],
+    "isFeatured": false,
+    "status": "active",
+    "soldCount": 55,
+    "averageRating": 4.7,
+    "reviewCount": 18,
+    "variants": [
+      {
+        "size": "Tiêu chuẩn",
+        "price": 290000,
+        "stock": 20,
+        "sku": "GRAD-S"
+      },
+      {
+        "size": "Cao cấp",
+        "price": 450000,
+        "stock": 12,
+        "sku": "GRAD-L"
+      }
+    ],
+    "createdAt": "2026-10-05T12:59:45.782Z"
+  },
+  {
+    "id": "170881f5-a2a6-49aa-8d53-eb44deb14d0e",
+    "name": "Giỏ hoa lan hồ điệp sinh nhật",
+    "slug": "gio-hoa-lan-ho-diep-sinh-nhat",
+    "description": "Giỏ hoa lan hồ điệp sang trọng, biểu tượng của vẻ đẹp cao quý. Thích hợp làm quà sinh nhật, tặng người thân yêu hoặc đối tác kinh doanh.",
+    "type": "Giỏ hoa",
+    "occasion": [
+      "Sinh nhật",
+      "Khai trương"
+    ],
+    "flowerType": "Lan",
+    "images": [
+      "https://images.unsplash.com/photo-1444930694458-01babf71ab65?w=600&h=450&fit=crop",
+      "https://images.unsplash.com/photo-1490750967868-88df5691cc56?w=600&h=450&fit=crop"
+    ],
+    "isFeatured": true,
+    "status": "active",
+    "soldCount": 47,
+    "averageRating": 4.9,
+    "reviewCount": 16,
+    "variants": [
+      {
+        "size": "Tiêu chuẩn (2 cành)",
+        "price": 680000,
+        "stock": 8,
+        "sku": "ORCHID-BASKET-S"
+      },
+      {
+        "size": "Cao cấp (4 cành)",
+        "price": 1100000,
+        "stock": 5,
+        "sku": "ORCHID-BASKET-L"
+      }
+    ],
+    "createdAt": "2026-10-05T12:59:45.784Z"
+  },
+  {
+    "id": "906ae9bf-b81a-4f19-aaba-be4b5c3c38a7",
+    "name": "Bó hoa hồng vàng chúc mừng",
+    "slug": "bo-hoa-hong-vang-chuc-mung",
+    "description": "Bó hoa hồng vàng rực rỡ mang ý nghĩa chúc mừng thành công và thịnh vượng. Màu vàng tươi sáng là biểu tượng của niềm vui và hy vọng.",
+    "type": "Bó hoa",
+    "occasion": [
+      "Chúc mừng",
+      "Sinh nhật",
+      "Khai trương"
+    ],
+    "flowerType": "Hồng",
+    "images": [
+      "https://images.unsplash.com/photo-1485637701894-09ad422f6de6?w=600&h=450&fit=crop",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&fit=crop"
+    ],
+    "isFeatured": false,
+    "status": "active",
+    "soldCount": 73,
+    "averageRating": 4.6,
+    "reviewCount": 24,
+    "variants": [
+      {
+        "size": "Nhỏ (15 bông)",
+        "price": 280000,
+        "stock": 18,
+        "sku": "ROSE-GOLD-S"
+      },
+      {
+        "size": "Lớn (30 bông)",
+        "price": 520000,
+        "stock": 10,
+        "sku": "ROSE-GOLD-L"
+      }
+    ],
+    "createdAt": "2026-10-05T12:59:45.786Z"
+  },
+  {
+    "id": "e477c8e2-4860-4137-bbd4-ac12865ba9aa",
+    "name": "Hộp hoa hồng sáp vĩnh cửu",
+    "slug": "hop-hoa-hong-sap-vinh-cuu",
+    "description": "Hộp hoa hồng sáp nhập khẩu bền đẹp mãi mãi, không cần chăm sóc. Biểu tượng của tình yêu vĩnh cửu, là món quà độc đáo cho những dịp đặc biệt.",
+    "type": "Hộp hoa",
+    "occasion": [
+      "Tình yêu",
+      "Sinh nhật",
+      "Cảm ơn"
+    ],
+    "flowerType": "Hồng",
+    "images": [
+      "https://images.unsplash.com/photo-1548460848-d7b0da0e01e0?w=600&h=450&fit=crop",
+      "https://images.unsplash.com/photo-1487530811015-780b21f4f0e5?w=600&h=450&fit=crop"
+    ],
+    "isFeatured": false,
+    "status": "active",
+    "soldCount": 91,
+    "averageRating": 4.8,
+    "reviewCount": 37,
+    "variants": [
+      {
+        "size": "Hộp tròn nhỏ (9 bông)",
+        "price": 450000,
+        "stock": 15,
+        "sku": "ETERNAL-S"
+      },
+      {
+        "size": "Hộp vuông vừa (16 bông)",
+        "price": 750000,
+        "stock": 10,
+        "sku": "ETERNAL-M"
+      },
+      {
+        "size": "Hộp lớn (25 bông)",
+        "price": 1200000,
+        "stock": 5,
+        "sku": "ETERNAL-L"
+      }
+    ],
+    "careInstructions": "Không cần tưới nước. Tránh ánh nắng trực tiếp và nơi ẩm ướt. Bảo quản lâu dài trong điều kiện nhiệt độ phòng.",
+    "createdAt": "2026-10-05T12:59:45.788Z",
+    "updatedAt": "2026-10-07T10:26:53.780Z"
+  }
+]

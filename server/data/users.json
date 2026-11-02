@@ -1,0 +1,32 @@
+[
+  {
+    "id": "c64c5eee-0c2c-4715-87ad-22d253689ebe",
+    "name": "Admin Flora",
+    "email": "admin@floraflower.vn",
+    "password": "$2b$10$HuE5bOBQTd7yMueg2cYy6eVLKutqqeAE/Cn0TFhRdPzLX5p.tPtGK",
+    "phone": "0901000001",
+    "role": "admin",
+    "address": "123 Đường Hoa Hồng, Q1, TP.HCM",
+    "createdAt": "2026-10-05T12:59:45.613Z"
+  },
+  {
+    "id": "11cb9032-9e2f-48da-8979-96248cf65142",
+    "name": "Nguyễn Thị Hoa",
+    "email": "customer@example.com",
+    "password": "$2b$10$e5qovfjHq18VdB6/wrqCuO/qQR/49gimEGPsN643MdKOTEB7Dbpqm",
+    "phone": "0901234567",
+    "role": "customer",
+    "address": "456 Đường Cúc Vạn Thọ, Q3, TP.HCM",
+    "createdAt": "2026-10-05T12:59:45.692Z"
+  },
+  {
+    "id": "1238bc2c-cd81-4ae6-b63d-c7641f8f2ee3",
+    "name": "Trần Văn Bình",
+    "email": "binh.tran@example.com",
+    "password": "$2b$10$zRW.QnwDFHjMrqEcpWuVoOEVA5psbZN6ON564ztI4WAHTYjnnaS.W",
+    "phone": "0912345678",
+    "role": "customer",
+    "address": "789 Đường Hướng Dương, Q7, TP.HCM",
+    "createdAt": "2026-10-05T12:59:45.765Z"
+  }
+]
