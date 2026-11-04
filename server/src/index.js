@@ -1,10 +1,12 @@
 const dns = require('dns');
 dns.setServers(['1.1.1.1', '1.0.0.1']);
 
+const path = require('path');
+const fs = require('fs');
+require('dotenv').config({ path: path.join(__dirname, '../.env') });
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
 const db = require('./db');
 
 const authRoutes = require('./routes/authRoutes');
@@ -36,7 +38,19 @@ app.get('/api/health', (req, res) =>
   res.json({ status: 'ok', dbMode: process.env.DB_MODE || 'local', timestamp: new Date().toISOString() })
 );
 
-// 404
+// Phục vụ frontend React khi đã build
+const clientDist = path.join(__dirname, '../../client/dist');
+if (fs.existsSync(clientDist)) {
+  app.use(express.static(clientDist));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api') || req.path.startsWith('/uploads')) {
+      return next();
+    }
+    res.sendFile(path.join(clientDist, 'index.html'));
+  });
+}
+
+// 404 cho các route API không tồn tại
 app.use((req, res) => res.status(404).json({ message: 'Route not found' }));
 
 // Error handler

@@ -1,0 +1,14 @@
+{
+  "name": "flora-flower",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Flora Flower - Hệ thống Web Shop Hoa Tươi Cao Cấp",
+  "scripts": {
+    "build:client": "npm install --prefix client && npm run build --prefix client",
+    "install:server": "npm install --prefix server",
+    "build": "npm install --prefix client && npm run build --prefix client && npm install --prefix server",
+    "start": "node server/src/index.js",
+    "server": "npm run start --prefix server",
+    "client": "npm run dev --prefix client"
+  }
+}
