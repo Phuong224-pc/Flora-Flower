@@ -68,7 +68,12 @@ export default function Header() {
       <header className="header">
         <div className="header-inner">
           {/* Logo */}
-          <Link to="/" className="header-logo" aria-label="Flora Flower - Trang chủ">
+          <Link
+            to="/"
+            className="header-logo"
+            aria-label="Flora Flower - Trang chủ"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
             🌸 FLORA <span className="logo-dot">FLOWER</span>
           </Link>
 
@@ -219,7 +224,13 @@ export default function Header() {
           />
           <nav className="mobile-drawer" aria-label="Menu điều hướng mobile" role="dialog" aria-modal="true">
             <div className="drawer-header">
-              <span className="drawer-logo">🌸 Flora <span style={{ color: 'var(--color-primary)' }}>Flower</span></span>
+              <Link
+                to="/"
+                onClick={() => { setMobileOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
+                style={{ textDecoration: 'none' }}
+              >
+                <span className="drawer-logo">🌸 Flora <span style={{ color: 'var(--color-primary)' }}>Flower</span></span>
+              </Link>
               <button
                 className="btn btn-ghost btn-icon"
                 onClick={() => setMobileOpen(false)}

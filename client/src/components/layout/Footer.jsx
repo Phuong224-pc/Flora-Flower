@@ -8,7 +8,15 @@ export default function Footer() {
         <div className="footer-grid">
           {/* Brand */}
           <div>
-            <div className="footer-logo">🌸 FLORA <span>FLOWER</span></div>
+            <Link
+              to="/"
+              className="footer-logo"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              style={{ textDecoration: 'none', display: 'inline-flex', cursor: 'pointer' }}
+              title="Về trang chủ Flora Flower"
+            >
+              🌸 FLORA <span className="logo-dot">FLOWER</span>
+            </Link>
             <p className="footer-desc">
               Chúng tôi mang yêu thương gửi trao qua từng đóa hoa tươi tắn,
               thiết kế tinh tế dành riêng cho những dịp đặc biệt của bạn.
