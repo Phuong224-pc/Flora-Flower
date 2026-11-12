@@ -11,7 +11,7 @@ const FALLBACK_IMAGES = [
   'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop',
 ]
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, showFeaturedBadge = true }) {
   const { addToCart } = useCartStore()
   const toast = useToastStore()
 
@@ -56,7 +56,7 @@ export default function ProductCard({ product }) {
         {hasDiscount && (
           <span className="product-card__badge product-card__badge--sale">-{discountPct}%</span>
         )}
-        {!hasDiscount && product.isFeatured && (
+        {!hasDiscount && product.isFeatured && showFeaturedBadge && (
           <span className="product-card__badge">Nổi bật</span>
         )}
         {isOutOfStock && (

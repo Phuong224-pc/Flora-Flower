@@ -255,7 +255,13 @@ function ProductsSection({ products, bestSellers, newProducts, loading }) {
           </div>
         ) : displayed.length > 0 ? (
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '1.25rem' }}>
-            {displayed.map(p => <ProductCard key={p.id} product={p} />)}
+            {displayed.map(p => (
+              <ProductCard
+                key={p.id}
+                product={p}
+                showFeaturedBadge={tab === 'featured'}
+              />
+            ))}
           </div>
         ) : (
           <div style={{ textAlign: 'center', padding: '4rem', color: 'var(--color-text-muted)' }}>

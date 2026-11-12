@@ -320,7 +320,13 @@ export default function Shop() {
 
                 {viewMode === 'grid' ? (
                   <div style={{ display: 'grid', gridTemplateColumns: `repeat(${showFilter ? 3 : 4}, 1fr)`, gap: '1.25rem' }}>
-                    {products.map(p => <ProductCard key={p.id} product={p} />)}
+                    {products.map(p => (
+                      <ProductCard
+                        key={p.id}
+                        product={p}
+                        showFeaturedBadge={filters.sort !== 'bestseller' && filters.sort !== 'newest'}
+                      />
+                    ))}
                   </div>
                 ) : (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '.875rem' }}>
