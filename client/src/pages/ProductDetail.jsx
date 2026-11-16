@@ -7,6 +7,7 @@ import {
 } from 'lucide-react'
 import api from '../services/api'
 import useCartStore from '../store/useCartStore'
+import useAuthStore from '../store/useAuthStore'
 import useToastStore from '../store/useToastStore'
 import ProductCard from '../components/ui/ProductCard'
 import { formatVND, formatDate, renderStars } from '../utils/helpers'
@@ -22,6 +23,7 @@ export default function ProductDetail() {
   const { slug } = useParams()
   const navigate = useNavigate()
   const { addToCart } = useCartStore()
+  const user = useAuthStore(s => s.user)
   const toast = useToastStore()
 
   const [product, setProduct]           = useState(null)
@@ -59,6 +61,10 @@ export default function ProductDetail() {
   }
 
   const handleAddCart = () => {
+    if (user?.role === 'admin') {
+      toast.warning('Tài khoản quản trị không thể mua hàng')
+      return
+    }
     if (!selectedVariant) { toast.warning('Vui lòng chọn phiên bản'); return }
     if (selectedVariant.stock === 0) { toast.warning('Phiên bản này tạm hết hàng'); return }
     addToCart(product, selectedVariant, quantity, { cardMessage })
@@ -68,6 +74,10 @@ export default function ProductDetail() {
   }
 
   const handleBuyNow = () => {
+    if (user?.role === 'admin') {
+      toast.warning('Tài khoản quản trị không thể mua hàng')
+      return
+    }
     if (!selectedVariant) { toast.warning('Vui lòng chọn phiên bản'); return }
     if (selectedVariant.stock === 0) { toast.warning('Phiên bản này tạm hết hàng'); return }
     addToCart(product, selectedVariant, quantity, { cardMessage })

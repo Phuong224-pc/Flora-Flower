@@ -1,0 +1,301 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║     KỊCH BẢN & GHI CHÚ THUYẾT TRÌNH BÁO CÁO ĐỒ ÁN WEBSITE BÁN HOA (FLORA)    ║
+║     Môn học: Lập Trình Web Nâng Cao | Giảng viên hướng dẫn: ThS. Đặng Đình Hòa ║
+║     Thời lượng thuyết trình: 5 – 7 phút (chưa tính thời gian demo trực tiếp)  ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+================================================================================
+I. KỊCH BẢN NÓI CHI TIẾT CHO TỪNG SLIDE (5 – 7 PHÚT)
+================================================================================
+
+--------------------------------------------------------------------------------
+SLIDE 1 – TRANG BÌA (Dự kiến: 20 giây)
+--------------------------------------------------------------------------------
+[Lời nói]:
+"Kính chào thầy Đặng Đình Hòa và toàn thể các bạn!
+Hôm nay, nhóm chúng em gồm 3 thành viên: Võ Thành Trung, Trương Trần Thanh Phương
+và Võ Ngọc Duy thuộc Khóa 29 ngành Công nghệ Thông tin – Trường Đại học Văn Lang,
+xin phép được báo cáo đồ án môn Lập Trình Web Nâng Cao với đề tài:
+'Xây dựng Website Thương Mại Điện Tử Bán Hoa Tươi – Flora Flower'."
+
+--------------------------------------------------------------------------------
+SLIDE 2 – MỤC LỤC BÁO CÁO (Dự kiến: 20 giây)
+--------------------------------------------------------------------------------
+[Lời nói]:
+"Nội dung báo cáo hôm nay bám sát 8 mục trọng tâm theo yêu cầu của môn học:
+1. Giới thiệu đề tài
+2. Ngôn ngữ HTML, CSS
+3. JavaScript
+4. NodeJS
+5. MongoDB
+6. ExpressJS
+7. ReactJS
+8. Và phần Demo trực tiếp website trên nền tảng Cloud."
+
+--------------------------------------------------------------------------------
+SLIDE 3 – GIỚI THIỆU ĐỀ TÀI (Dự kiến: 45 giây)
+--------------------------------------------------------------------------------
+[Lời nói]:
+"Flora Flower là nền tảng thương mại điện tử chuyên cung cấp hoa tươi trực tuyến.
+Bài toán nhóm đặt ra là chuẩn hóa quy trình mua hoa: Khách hàng có thể dễ dàng chọn hoa
+theo từng chủ đề sự kiện (sinh nhật, khai trương, tốt nghiệp), tùy chọn kích cỡ bó hoa (S/M/L)
+và đặc biệt là tính năng hẹn chính xác khung giờ giao hoa kèm thiệp chúc mừng.
+
+Hệ thống phục vụ 3 đối tượng chính:
+- Khách vãng lai có thể tra cứu đơn hàng nhanh bằng số điện thoại mà không bắt buộc đăng nhập.
+- Khách hàng đăng ký tài khoản có giỏ hàng thông minh, quản lý lịch sử đơn và mã giảm giá.
+- Quản trị viên (Admin) theo dõi toàn bộ hoạt động qua Dashboard trực quan.
+Về mặt thực tiễn, đồ án áp dụng kiến trúc Full-stack hiện đại để giải quyết bài toán
+chuyển đổi số cho các shop hoa tươi vừa và nhỏ."
+
+[Hình ảnh cần bổ sung]:
+- Chèn ảnh chụp giao diện Trang chủ website (Home.jsx) vào khung ảnh bên phải.
+
+--------------------------------------------------------------------------------
+SLIDE 4 – NGÔN NGỮ HTML VÀ CSS (Dự kiến: 45 giây)
+--------------------------------------------------------------------------------
+[Lời nói]:
+"Về ngôn ngữ xây dựng giao diện:
+Thay vì viết HTML thuần, dự án ứng dụng cú pháp React JSX (JavaScript XML).
+JSX cho phép chúng em viết cấu trúc giao diện HTML lồng ghép trực tiếp với logic JavaScript,
+sau đó công cụ Vite sẽ biên dịch thành mã JS tối ưu cho trình duyệt. Ví dụ như component
+ProductCard trên màn hình hiển thị ảnh, tên hoa và nút bấm theo dữ liệu động.
+
+Về CSS, nhóm ứng dụng Tailwind CSS – một utility-first CSS framework. Thay vì phải viết
+các file .css riêng lẻ, chúng em sử dụng các class tiện ích có sẵn như grid, flex, rounded, shadow,
+và đặc biệt là các tiền tố responsive sm:, md:, lg: giúp giao diện tự động co giãn đẹp mắt
+trên cả máy tính và điện thoại."
+
+[Hình ảnh cần bổ sung]:
+- Khung trái: Ảnh chụp đoạn code component JSX (ProductCard.jsx).
+- Khung phải: Ảnh chụp giao diện Responsive thực tế trên mobile hoặc desktop.
+
+--------------------------------------------------------------------------------
+SLIDE 5 – JAVASCRIPT (Dự kiến: 45 giây)
+--------------------------------------------------------------------------------
+[Lời nói]:
+"JavaScript là ngôn ngữ cốt lõi vận hành toàn bộ hệ thống Full-stack:
+Ở Frontend, JavaScript xử lý các sự kiện click, lọc sản phẩm realtime,
+gọi API bất đồng bộ qua Axios với cú pháp async/await, và quản lý State toàn cục
+bằng thư viện Zustand – tự động lưu giỏ hàng vào LocalStorage của trình duyệt.
+
+Ở Backend, JavaScript chạy trên môi trường Node.js đảm nhận việc tiếp nhận request,
+kiểm tra dữ liệu, mã hóa mật khẩu an toàn bằng bcrypt (với 10 salt rounds),
+và cấp phát mã JSON Web Token (JWT) để xác thực phiên đăng nhập.
+Một số chức năng thực tế nổi bật dùng JS là: tính giá tiền biến thể kích cỡ hoa tức thì,
+sinh mã QR chuyển khoản VietQR, và vẽ biểu đồ doanh thu Recharts."
+
+--------------------------------------------------------------------------------
+SLIDE 6 – NODEJS (Dự kiến: 40 giây)
+--------------------------------------------------------------------------------
+[Lời nói]:
+"Node.js là runtime môi trường chạy JavaScript phía server trên nền Google V8 Engine.
+Nhờ cơ chế Non-blocking I/O và hướng sự kiện (Event-driven), Node.js có thể xử lý
+hàng ngàn kết nối đồng thời từ khách hàng một cách mượt mà.
+
+Trong đồ án, Node.js khởi chạy HTTP Server tại cổng 10000 thông qua file server/src/index.js.
+Node.js đóng vai trò điều phối toàn bộ luồng: nhận request từ React, chuyển qua Express xử lý,
+gọi Mongoose truy vấn Database, đồng thời phục vụ luôn thư mục build tĩnh client/dist.
+Khi deploy lên Render.com, lệnh 'npm run start' sẽ khởi động server Node.js hoạt động 24/7."
+
+--------------------------------------------------------------------------------
+SLIDE 7 – CƠ SỞ DỮ LIỆU MONGODB (Dự kiến: 45 giây)
+--------------------------------------------------------------------------------
+[Lời nói]:
+"Về cơ sở dữ liệu, nhóm chọn MongoDB – hệ quản trị CSDL NoSQL lưu trữ dưới dạng Document JSON/BSON.
+MongoDB rất phù hợp với bài toán bán hoa vì một mẫu hoa có thể có nhiều kích cỡ (S/M/L) với giá
+khác nhau và nhiều ảnh – cấu trúc này lưu trữ dưới dạng mảng lồng nhau (embedded array) rất tự nhiên.
+
+Nhóm sử dụng Mongoose ODM để định nghĩa Schema và Model chặt chẽ.
+Cơ sở dữ liệu thực tế gồm 6 Collections chính:
+- products: lưu danh mục hoa, giá, biến thể, hình ảnh và số lượng kho.
+- users: tài khoản, mật khẩu băm bcrypt, phân quyền customer và admin.
+- orders: đơn đặt hàng, chi tiết sản phẩm, hẹn giờ giao, trạng thái thanh toán.
+- occasions: các dịp tặng hoa như Sinh nhật, Khai trương, Tình yêu...
+- coupons: mã giảm giá với hạn dùng và giá trị đơn tối thiểu.
+- settings: thông tin cửa hàng, phí ship và số tài khoản ngân hàng sinh mã VietQR.
+Đặc biệt, hệ thống có thiết kế Adapter hỗ trợ linh hoạt cả MongoDB Atlas lẫn Local JSON file."
+
+--------------------------------------------------------------------------------
+SLIDE 8 – WEB FRAMEWORK EXPRESS.JS (Dự kiến: 40 giây)
+--------------------------------------------------------------------------------
+[Lời nói]:
+"Express.js là web framework tối giản chạy trên Node.js để xây dựng RESTful API.
+Mã nguồn backend được tổ chức routes theo từng module nghiệp vụ riêng biệt:
+authRoutes, productRoutes, orderRoutes, adminRoutes và couponRoutes.
+
+Về bảo mật và xử lý dữ liệu, nhóm xây dựng các Middleware chuyên trách:
+- Middleware requireAuth giải mã và kiểm tra tính hợp lệ của JWT token trong header.
+- Middleware requireAdmin kiểm tra phân quyền tài khoản (role === 'admin').
+- Middleware Multer tiếp nhận upload file ảnh hoa từ form, giới hạn tối đa 10 ảnh
+  và lưu trữ an toàn vào thư mục server/uploads/products/."
+
+--------------------------------------------------------------------------------
+SLIDE 9 – THƯ VIỆN REACT.JS (Dự kiến: 45 giây)
+--------------------------------------------------------------------------------
+[Lời nói]:
+"Giao diện người dùng được xây dựng bằng React.js theo tư duy Component hóa.
+Các thành phần như Thẻ hoa (ProductCard), Ngăn giỏ hàng (CartDrawer), Bộ lọc (FilterSidebar)
+được tách riêng, giúp tái sử dụng mã nguồn và dễ dàng nâng cấp.
+
+Nhóm sử dụng hệ sinh thái React Hooks hiện đại:
+- useState để quản lý các trạng thái cục bộ như kích cỡ hoa đang chọn, trạng thái tải trang.
+- useEffect tự động gọi API lấy danh sách hoa khi bộ lọc thay đổi.
+- useNavigate và useParams từ React Router v6 để điều hướng trang và lấy slug sản phẩm.
+Ví dụ như trên slide: Khi khách bấm đổi giữa size S, M hoặc L, React State cập nhật
+và giá tiền hiển thị trên màn hình tự động thay đổi ngay lập tức mà không cần tải lại trang."
+
+--------------------------------------------------------------------------------
+SLIDE 10 – KIẾN TRÚC TỔNG THỂ HỆ THỐNG (Dự kiến: 35 giây)
+--------------------------------------------------------------------------------
+[Lời nói]:
+"Đây là sơ đồ kiến trúc tổng thể 5 tầng của hệ thống Flora Flower:
+1. Người dùng thao tác trên trình duyệt Web.
+2. Frontend ReactJS tiếp nhận sự kiện, xử lý UI và gửi HTTP Request qua Axios.
+3. ExpressJS Router tiếp nhận endpoint, điều phối qua Middleware kiểm tra JWT token.
+4. Controller thực thi logic nghiệp vụ và giao tiếp với MongoDB qua Mongoose.
+5. MongoDB xử lý truy vấn, trả về Document. Express đóng gói JSON trả về cho React render lại UI.
+
+Ví dụ cụ thể ở luồng đặt hàng: Khách bấm 'Đặt hàng' ➔ React gửi Axios POST /api/orders
+➔ Middleware xác thực ➔ Controller trừ số lượng kho, tính chiết khấu coupon, lưu đơn vào MongoDB
+➔ Trả kết quả thành công và hiển thị hóa đơn cho khách."
+
+--------------------------------------------------------------------------------
+SLIDE 11 – CHỨC NĂNG USER VÀ ADMIN (Dự kiến: 50 giây)
+--------------------------------------------------------------------------------
+[Lời nói]:
+"Dựa trên source code thực tế, nhóm đã hoàn thành đầy đủ hai phân hệ chức năng:
+
+Phía Khách hàng (User):
+- Tìm kiếm hoa và lọc theo nhiều tiêu chí (dịp tặng, giá, tình trạng kho).
+- Chọn biến thể kích cỡ hoa S/M/L tự động cập nhật đơn giá.
+- Giỏ hàng thông minh lưu LocalStorage, không mất dữ liệu khi đóng tab.
+- Danh sách hoa yêu thích và lịch sử 12 mẫu hoa vừa xem.
+- Đăng ký, đăng nhập tài khoản an toàn với JWT và mật khẩu băm.
+- Quy trình đặt hàng 2 bước tiện lợi: nhập địa chỉ, hẹn giờ giao, viết thiệp mừng.
+- Đa dạng thanh toán: COD, Chuyển khoản VietQR tự động, Demo online payment.
+- Áp dụng mã Coupon giảm giá, xem lịch sử đơn, hủy đơn Pending.
+- Tra cứu tình trạng đơn hàng công khai bằng SĐT mà không cần login.
+
+Phía Quản trị viên (Admin):
+- Dashboard thống kê tổng doanh thu, số đơn 7 trạng thái, top 5 hoa bán chạy qua biểu đồ Recharts.
+- Quản lý đơn hàng: cập nhật 7 trạng thái vận chuyển và trạng thái thanh toán.
+- Quản lý kho hoa: CRUD thêm/sửa/xóa hoa, quản lý biến thể, upload tối đa 10 ảnh với Multer.
+- Quản lý danh mục dịp tặng, quản lý khách hàng, cấu hình mã coupon và thông tin ngân hàng VietQR."
+
+--------------------------------------------------------------------------------
+SLIDE 12 – PHÂN CHIA CÔNG VIỆC VÀ KẾT QUẢ ĐỒ ÁN (Dự kiến: 35 giây)
+--------------------------------------------------------------------------------
+[Lời nói]:
+"Theo quy định đánh giá đồ án nhóm, nhóm chúng em gồm 3 thành viên:
+Võ Thành Trung giữ vai trò Nhóm trưởng, cùng hai thành viên Trương Trần Thanh Phương
+và Võ Ngọc Duy. [Các bạn tự trình bày ngắn gọn phần việc cụ thể đã phân công].
+
+Về kết quả đạt được: Nhóm đã xây dựng hoàn chỉnh một ứng dụng Full-stack SPA kết nối RESTful API,
+áp dụng đầy đủ các công nghệ trong chương trình học (React, Node, Express, Mongo, JWT),
+và đã deploy thành công sản phẩm thực tế lên Cloud Render.com.
+
+Về hạn chế: Hiện tại cổng thanh toán VietQR hiển thị mã QR nhưng Admin vẫn cần đối soát thủ công;
+tab đánh giá hoa mới có giao diện mẫu. Hướng phát triển tiếp theo của nhóm là tích hợp Webhook
+cổng thanh toán tự động SePAY/VNPay và xây dựng bot thông báo Telegram khi có đơn hàng mới."
+
+--------------------------------------------------------------------------------
+SLIDE 13 – DEMO WEBSITE (DUY NHẤT 1 SLIDE) (Dự kiến: 2 – 3 phút demo trực tiếp)
+--------------------------------------------------------------------------------
+[Lời nói]:
+"Sau đây, nhóm xin phép được mở trực tiếp website để demo các chức năng thực tế cho thầy xem.
+Website hiện đang chạy live tại địa chỉ: flora-flower.onrender.com.
+Em xin phép bấm vào nút LIVE DEMO trên màn hình để mở trình duyệt..."
+
+[Thao tác click vào nút lớn trên slide để mở trình duyệt]
+
+--------------------------------------------------------------------------------
+SLIDE 14 – TÀI LIỆU THAM KHẢO (Dự kiến: 15 giây)
+--------------------------------------------------------------------------------
+[Lời nói]:
+"Trong quá trình xây dựng dự án, nhóm đã tham khảo các nguồn tài liệu chính thức từ:
+MDN Web Docs cho HTML/CSS/JavaScript, tài liệu chính thức của Node.js, MongoDB Manual,
+Mongoose ODM Docs, Express.js Guide và React.js Documentation."
+
+--------------------------------------------------------------------------------
+SLIDE 15 – CẢM ƠN VÀ Q&A (Dự kiến: 15 giây)
+--------------------------------------------------------------------------------
+[Lời nói]:
+"Bài báo cáo đồ án của nhóm chúng em đến đây là kết thúc.
+Nhóm xin chân thành cảm ơn thầy Đặng Đình Hòa và các bạn đã lắng nghe.
+Chúng em rất mong nhận được những lời nhận xét, góp ý và câu hỏi từ thầy để hoàn thiện đồ án hơn!"
+
+================================================================================
+II. KỊCH BẢN THAO TÁC DEMO TRỰC TIẾP TRÊN WEBSITE (2 – 3 PHÚT)
+================================================================================
+
+Bước 1: Trang chủ (Home.jsx) (30 giây)
+- Giới thiệu Banner sự kiện, danh mục hoa theo dịp tặng (Sinh nhật, Khai trương...).
+- Cuộn xuống xem danh sách sản phẩm nổi bật, best seller.
+
+Bước 2: Cửa hàng & Bộ lọc (Shop.jsx) (45 giây)
+- Vào trang "Cửa hàng".
+- Thử chọn bộ lọc: Lọc hoa theo Dịp tặng ➔ Lọc theo khoảng giá ➔ Check 'Còn hàng'.
+- Bấm sắp xếp: 'Giá tăng dần' / 'Bán chạy nhất' để thấy sản phẩm sắp xếp ngay lập tức.
+
+Bước 3: Chi tiết sản phẩm & Kích cỡ (ProductDetail.jsx) (45 giây)
+- Bấm vào một sản phẩm hoa bất kỳ (ví dụ: Bó Hoa Hồng Đỏ).
+- Bấm chọn đổi giữa Size S, Size M, Size L ➔ Chỉ cho thầy thấy giá tiền tự động thay đổi.
+- Bấm "Thêm vào giỏ hàng" ➔ Ngăn giỏ hàng (CartDrawer) trượt ra hiển thị sản phẩm vừa thêm.
+
+Bước 4: Đặt hàng & Thanh toán VietQR (Checkout.jsx) (45 giây)
+- Bấm "Tiến hành đặt hàng".
+- Nhập thông tin người nhận, chọn Khung giờ giao hoa, nhập nội dung thiệp chúc mừng.
+- Thử nhập mã Coupon giảm giá (nếu có trong hệ thống).
+- Chọn phương thức "Chuyển khoản VietQR" ➔ Bấm Hoàn tất đặt hàng ➔ Màn hình hiển thị mã QR
+  sinh tự động từ VietQR API có sẵn thông tin số tiền và nội dung chuyển khoản.
+
+Bước 5: Phân hệ Quản trị (Admin Dashboard) (45 giây)
+- Đăng nhập bằng tài khoản Admin ➔ Vào trang Quản trị (/admin).
+- Chỉ cho thầy xem Dashboard thống kê với biểu đồ Recharts (doanh thu, đơn hàng).
+- Vào mục "Đơn hàng" ➔ Tìm đơn hàng vừa đặt ➔ Cập nhật trạng thái từ Pending sang Confirmed.
+- Vào mục "Sản phẩm" ➔ Mở form thêm sản phẩm hoa mới có upload nhiều ảnh.
+
+================================================================================
+III. GỢI Ý TRẢ LỜI CÁC CÂU HỎI PHẢN BIỆN CỦA GIẢNG VIÊN (Q&A)
+================================================================================
+
+Câu 1: JSX khác HTML thuần như thế nào?
+Trả lời:
+"Dạ thưa thầy, JSX là cú pháp mở rộng của JavaScript, trông giống HTML nhưng có thể nhúng trực tiếp
+các biểu thức JavaScript thông qua cặp dấu ngoặc nhọn {}. Trong JSX, các thuộc tính dùng quy tắc camelCase
+(ví dụ className thay vì class, onClick thay vì onclick). Công cụ Vite (Babel) sẽ biên dịch JSX thành
+React.createElement() trước khi trình duyệt thực thi."
+
+Câu 2: Cơ chế quản lý State của giỏ hàng (Zustand) hoạt động ra sao?
+Trả lời:
+"Dạ, nhóm dùng Zustand với middleware persist trong file useCartStore.js. Khi người dùng thêm hoặc sửa số lượng hoa,
+Zustand cập nhật state trong bộ nhớ RAM đồng thời tự động đồng bộ hóa xuống LocalStorage của trình duyệt.
+Nhờ đó, ngay cả khi khách đóng tab hoặc tải lại trang thì giỏ hàng vẫn được bảo toàn nguyên vẹn."
+
+Câu 3: Phân quyền giữa User và Admin được bảo mật như thế nào ở Backend?
+Trả lời:
+"Dạ, hệ thống áp dụng bảo mật 2 lớp:
+1. Khi đăng nhập thành công, server cấp JWT token có payload chứa userId và role ('customer' hoặc 'admin').
+2. Ở các route quản trị (/api/admin/*), request bắt buộc phải đi qua 2 middleware liên tiếp:
+   - requireAuth: kiểm tra token hợp lệ bằng jwt.verify().
+   - requireAdmin: kiểm tra req.user.role === 'admin'. Nếu không phải admin thì trả về mã lỗi 403 Forbidden."
+
+Câu 4: Dual-mode Database Adapter hoạt động như thế nào?
+Trả lời:
+"Dạ, nhóm thiết kế theo mẫu Adapter Pattern:
+- Nếu biến môi trường DB_MODE=mongo: hệ thống kết nối MongoDB Atlas qua Mongoose Model.
+- Nếu DB_MODE=local: hệ thống đọc ghi dữ liệu trên các file JSON trong thư mục server/data/.
+Cả hai adapter đều tuân thủ cùng một interface phương thức (.findAll, .findById, .create, .update, .delete),
+do đó toàn bộ tầng Controller nghiệp vụ không cần thay đổi khi chuyển đổi CSDL."
+
+================================================================================
+IV. NHỮNG NỘI DUNG CHƯA XÁC MINH HOÀN CHỈNH TỪ SOURCE CODE (CẦN LƯU Ý)
+================================================================================
+1. Tính năng Đánh giá sản phẩm (Reviews):
+   - Trong trang ProductDetail.jsx có tab hiển thị bình luận và số sao đánh giá, nhưng ở backend
+     chưa có bảng Reviews riêng trong Database; hiện mới chỉ là giao diện mẫu.
+2. Thanh toán VietQR:
+   - Hệ thống gọi API img.vietqr.io để sinh ảnh QR động có nội dung chuyển khoản, nhưng chưa có Webhook
+     ngân hàng để tự động chuyển trạng thái đơn hàng sang 'Đã thanh toán' ngay khi tiền vào tài khoản;
+     Admin vẫn phải bấm duyệt thanh toán thủ công trong Dashboard.

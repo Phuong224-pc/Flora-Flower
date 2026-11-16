@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Heart, ShoppingCart } from 'lucide-react'
 import useCartStore from '../../store/useCartStore'
+import useAuthStore from '../../store/useAuthStore'
 import useToastStore from '../../store/useToastStore'
 import { formatVND } from '../../utils/helpers'
 
@@ -13,6 +14,7 @@ const FALLBACK_IMAGES = [
 
 export default function ProductCard({ product, showFeaturedBadge = true }) {
   const { addToCart } = useCartStore()
+  const user = useAuthStore(s => s.user)
   const toast = useToastStore()
 
   const defaultVariant = product.variants?.[0]
@@ -30,6 +32,10 @@ export default function ProductCard({ product, showFeaturedBadge = true }) {
   const handleAddCart = (e) => {
     e.preventDefault()
     e.stopPropagation()
+    if (user?.role === 'admin') {
+      toast.warning('Tài khoản quản trị không thể mua hàng')
+      return
+    }
     if (isOutOfStock) { toast.warning('Sản phẩm tạm hết hàng'); return }
     addToCart(product, defaultVariant || { size: 'Tiêu chuẩn', price }, 1)
     toast.success(`Đã thêm "${product.name}" vào giỏ hàng 🌸`)

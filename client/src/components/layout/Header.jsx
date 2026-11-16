@@ -155,10 +155,12 @@ export default function Header() {
               <Heart size={20} />
             </Link>
 
-            <Link to="/cart" className="header-icon-btn" title="Giỏ hàng" aria-label={`Giỏ hàng (${count} sản phẩm)`}>
-              <ShoppingCart size={20} />
-              {count > 0 && <span className="badge-count" aria-hidden="true">{count}</span>}
-            </Link>
+            {user?.role !== 'admin' && (
+              <Link to="/cart" className="header-icon-btn" title="Giỏ hàng" aria-label={`Giỏ hàng (${count} sản phẩm)`}>
+                <ShoppingCart size={20} />
+                {count > 0 && <span className="badge-count" aria-hidden="true">{count}</span>}
+              </Link>
+            )}
 
             {user ? (
               <div className="relative" ref={userMenuRef}>
