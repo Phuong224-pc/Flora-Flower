@@ -187,9 +187,11 @@ export default function Header() {
                     <Link to="/profile" className="user-dropdown-item" onClick={() => setUserMenuOpen(false)} role="menuitem">
                       <User size={16} /> Tài khoản
                     </Link>
-                    <Link to="/orders" className="user-dropdown-item" onClick={() => setUserMenuOpen(false)} role="menuitem">
-                      <Package size={16} /> Đơn hàng của tôi
-                    </Link>
+                    {user.role !== 'admin' && (
+                      <Link to="/orders" className="user-dropdown-item" onClick={() => setUserMenuOpen(false)} role="menuitem">
+                        <Package size={16} /> Đơn hàng của tôi
+                      </Link>
+                    )}
                     <div style={{ borderTop: '1px solid var(--color-border)', margin: '.25rem 0' }} />
                     <button onClick={handleLogout} className="user-dropdown-item danger" role="menuitem">
                       <LogOut size={16} /> Đăng xuất
@@ -288,7 +290,9 @@ export default function Header() {
                     <Link to="/admin" className="drawer-nav-link">🛠 Quản trị</Link>
                   )}
                   <Link to="/profile" className="drawer-nav-link">Tài khoản</Link>
-                  <Link to="/orders" className="drawer-nav-link">Đơn hàng</Link>
+                  {user.role !== 'admin' && (
+                    <Link to="/orders" className="drawer-nav-link">Đơn hàng</Link>
+                  )}
                   <button
                     className="drawer-nav-link"
                     onClick={handleLogout}

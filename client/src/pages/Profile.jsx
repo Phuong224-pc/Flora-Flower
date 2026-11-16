@@ -43,9 +43,11 @@ export default function Profile() {
           <button className={`tab-btn${tab === 'info' ? ' active' : ''}`} onClick={() => setTab('info')}>
             <User size={16} style={{ verticalAlign: 'middle', marginRight: '.3rem' }} /> Thông tin cá nhân
           </button>
-          <button className={`tab-btn${tab === 'orders' ? ' active' : ''}`} onClick={() => setTab('orders')}>
-            <Package size={16} style={{ verticalAlign: 'middle', marginRight: '.3rem' }} /> Đơn hàng
-          </button>
+          {user.role !== 'admin' && (
+            <button className={`tab-btn${tab === 'orders' ? ' active' : ''}`} onClick={() => setTab('orders')}>
+              <Package size={16} style={{ verticalAlign: 'middle', marginRight: '.3rem' }} /> Đơn hàng
+            </button>
+          )}
         </div>
 
         {tab === 'info' && (

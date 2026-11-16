@@ -26,6 +26,21 @@ export default function Orders() {
     </div>
   )
 
+  if (user?.role === 'admin') return (
+    <div className="empty-state" style={{ padding: '5rem 0', minHeight: '60vh' }}>
+      <div className="empty-state__icon">📋</div>
+      <div className="empty-state__title">Tài khoản quản trị quản lý đơn hàng tại trang Admin</div>
+      <div className="empty-state__desc" style={{ color: 'var(--color-text-muted)', marginTop: '.5rem' }}>
+        Vui lòng truy cập trang Quản trị để theo dõi và xử lý đơn hàng của toàn bộ khách hàng.
+      </div>
+      <Link to="/admin/orders">
+        <button className="btn btn-primary" style={{ marginTop: '1.5rem' }}>
+          ⚙️ Đến trang Quản lý đơn hàng
+        </button>
+      </Link>
+    </div>
+  )
+
   if (loading) return <div className="loading-page"><div className="spinner spinner-lg" /></div>
 
   return (
