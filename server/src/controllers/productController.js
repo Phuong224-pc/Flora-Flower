@@ -7,7 +7,7 @@ function genOrderCode() {
 
 exports.getProducts = async (req, res) => {
   try {
-    const { q, sort, occasion, type, flowerType, inStock, featured, limit = 20, page = 1 } = req.query;
+    const { q, sort, occasion, type, flowerType, inStock, featured, minPrice, maxPrice, limit = 20, page = 1 } = req.query;
     let products = await db.Products.find({});
 
     // Filters
@@ -55,11 +55,20 @@ exports.getProducts = async (req, res) => {
     // Only active
     products = products.filter(p => p.status !== 'inactive');
 
+    // Price filter
+    const getProductPrice = (p) => p.variants?.[0]?.price ?? p.basePrice ?? p.price ?? 0;
+    if (minPrice !== undefined && minPrice !== '' && Number(minPrice) > 0) {
+      products = products.filter(p => getProductPrice(p) >= Number(minPrice));
+    }
+    if (maxPrice !== undefined && maxPrice !== '' && Number(maxPrice) > 0) {
+      products = products.filter(p => getProductPrice(p) <= Number(maxPrice));
+    }
+
     // Sort
     if (sort === 'newest') products.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
     else if (sort === 'bestseller') products.sort((a, b) => (b.soldCount || 0) - (a.soldCount || 0));
-    else if (sort === 'price_asc') products.sort((a, b) => (a.variants?.[0]?.price || 0) - (b.variants?.[0]?.price || 0));
-    else if (sort === 'price_desc') products.sort((a, b) => (b.variants?.[0]?.price || 0) - (a.variants?.[0]?.price || 0));
+    else if (sort === 'price_asc') products.sort((a, b) => getProductPrice(a) - getProductPrice(b));
+    else if (sort === 'price_desc') products.sort((a, b) => getProductPrice(b) - getProductPrice(a));
     else products.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     const total = products.length;

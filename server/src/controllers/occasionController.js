@@ -52,13 +52,14 @@ exports.getOccasionProducts = async (req, res) => {
     });
 
     // Price filter
-    if (minPrice) products = products.filter(p => (p.variants?.[0]?.price || 0) >= Number(minPrice));
-    if (maxPrice) products = products.filter(p => (p.variants?.[0]?.price || 0) <= Number(maxPrice));
+    const getProductPrice = (p) => p.variants?.[0]?.price ?? p.basePrice ?? p.price ?? 0;
+    if (minPrice !== undefined && minPrice !== '' && Number(minPrice) > 0) products = products.filter(p => getProductPrice(p) >= Number(minPrice));
+    if (maxPrice !== undefined && maxPrice !== '' && Number(maxPrice) > 0) products = products.filter(p => getProductPrice(p) <= Number(maxPrice));
 
     // Sort
     if (sort === 'bestseller') products.sort((a, b) => (b.soldCount || 0) - (a.soldCount || 0));
-    else if (sort === 'price_asc') products.sort((a, b) => (a.variants?.[0]?.price||0) - (b.variants?.[0]?.price||0));
-    else if (sort === 'price_desc') products.sort((a, b) => (b.variants?.[0]?.price||0) - (a.variants?.[0]?.price||0));
+    else if (sort === 'price_asc') products.sort((a, b) => getProductPrice(a) - getProductPrice(b));
+    else if (sort === 'price_desc') products.sort((a, b) => getProductPrice(b) - getProductPrice(a));
     else products.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     const total = products.length;

@@ -249,7 +249,8 @@ ul,ol { list-style: none; }
   box-shadow: 0 0 0 3px rgba(232,98,122,.14);
 }
 .form-input::placeholder { color: var(--color-text-light); }
-.form-input.error { border-color: var(--color-error); }
+.form-input.error, .form-input.border-error { border-color: var(--color-error); }
+.form-input.error:focus, .form-input.border-error:focus { border-color: var(--color-error); box-shadow: 0 0 0 3px rgba(225, 29, 72, .15); }
 .form-select {
   width: 100%; padding: .625rem 2.5rem .625rem .875rem;
   border: 1.5px solid var(--color-border-strong);

@@ -10,12 +10,17 @@ export default function Register() {
   const { login } = useAuthStore()
   const toast = useToastStore()
   const [loading, setLoading] = useState(false)
-  const { register, handleSubmit, watch, formState: { errors } } = useForm()
+  const { register, handleSubmit, watch, formState: { errors } } = useForm({ mode: 'onTouched' })
 
   const onSubmit = async (data) => {
     setLoading(true)
     try {
-      const res = await api.post('/auth/register', { name: data.name, email: data.email, password: data.password, phone: data.phone })
+      const res = await api.post('/auth/register', {
+        name: data.name.trim(),
+        email: data.email.trim().toLowerCase(),
+        password: data.password,
+        phone: data.phone.trim()
+      })
       login(res.data.user, res.data.token)
       toast.success('Đăng ký thành công! Chào mừng bạn đến với Flora Flower 🌸')
       navigate('/')
@@ -36,39 +41,86 @@ export default function Register() {
         </div>
 
         <div className="card" style={{ padding: '2rem' }}>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <div className="form-group">
               <label className="form-label">Họ và tên *</label>
-              <input className={`form-input${errors.name ? ' border-error' : ''}`}
+              <input
+                className={`form-input${errors.name ? ' error' : ''}`}
                 placeholder="Nguyễn Văn A"
-                {...register('name', { required: 'Vui lòng nhập họ tên' })} />
+                {...register('name', {
+                  required: 'Vui lòng nhập họ và tên',
+                  minLength: { value: 2, message: 'Họ và tên phải có ít nhất 2 ký tự' },
+                  maxLength: { value: 50, message: 'Họ và tên tối đa 50 ký tự' },
+                  validate: v => v.trim().length >= 2 || 'Họ và tên không hợp lệ'
+                })}
+              />
               {errors.name && <div className="form-error">{errors.name.message}</div>}
             </div>
+
             <div className="form-group">
               <label className="form-label">Email *</label>
-              <input className={`form-input${errors.email ? ' border-error' : ''}`}
-                type="email" placeholder="email@example.com"
-                {...register('email', { required: 'Vui lòng nhập email', pattern: { value: /^\S+@\S+\.\S+$/, message: 'Email không hợp lệ' } })} />
+              <input
+                className={`form-input${errors.email ? ' error' : ''}`}
+                type="email"
+                placeholder="email@example.com"
+                {...register('email', {
+                  required: 'Vui lòng nhập địa chỉ email',
+                  pattern: {
+                    value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                    message: 'Email không đúng định dạng (VD: example@domain.com)'
+                  }
+                })}
+              />
               {errors.email && <div className="form-error">{errors.email.message}</div>}
             </div>
+
             <div className="form-group">
-              <label className="form-label">Số điện thoại</label>
-              <input className="form-input" placeholder="0901234567" {...register('phone')} />
+              <label className="form-label">Số điện thoại *</label>
+              <input
+                className={`form-input${errors.phone ? ' error' : ''}`}
+                type="tel"
+                placeholder="0901234567"
+                {...register('phone', {
+                  required: 'Vui lòng nhập số điện thoại',
+                  pattern: {
+                    value: /^(0[3|5|7|8|9])[0-9]{8}$/,
+                    message: 'Số điện thoại phải gồm 10 chữ số hợp lệ (VD: 0901234567)'
+                  }
+                })}
+              />
+              {errors.phone && <div className="form-error">{errors.phone.message}</div>}
             </div>
+
             <div className="form-group">
               <label className="form-label">Mật khẩu *</label>
-              <input className={`form-input${errors.password ? ' border-error' : ''}`}
-                type="password" placeholder="Ít nhất 6 ký tự"
-                {...register('password', { required: 'Vui lòng nhập mật khẩu', minLength: { value: 6, message: 'Mật khẩu ít nhất 6 ký tự' } })} />
+              <input
+                className={`form-input${errors.password ? ' error' : ''}`}
+                type="password"
+                placeholder="Ít nhất 6 ký tự"
+                {...register('password', {
+                  required: 'Vui lòng nhập mật khẩu',
+                  minLength: { value: 6, message: 'Mật khẩu phải có ít nhất 6 ký tự' },
+                  maxLength: { value: 32, message: 'Mật khẩu tối đa 32 ký tự' },
+                  validate: v => !/\s/.test(v) || 'Mật khẩu không được chứa khoảng trắng'
+                })}
+              />
               {errors.password && <div className="form-error">{errors.password.message}</div>}
             </div>
+
             <div className="form-group">
               <label className="form-label">Xác nhận mật khẩu *</label>
-              <input className={`form-input${errors.confirmPassword ? ' border-error' : ''}`}
-                type="password" placeholder="Nhập lại mật khẩu"
-                {...register('confirmPassword', { required: 'Vui lòng xác nhận mật khẩu', validate: v => v === watch('password') || 'Mật khẩu không khớp' })} />
+              <input
+                className={`form-input${errors.confirmPassword ? ' error' : ''}`}
+                type="password"
+                placeholder="Nhập lại mật khẩu"
+                {...register('confirmPassword', {
+                  required: 'Vui lòng xác nhận mật khẩu',
+                  validate: v => v === watch('password') || 'Mật khẩu xác nhận không trùng khớp'
+                })}
+              />
               {errors.confirmPassword && <div className="form-error">{errors.confirmPassword.message}</div>}
             </div>
+
             <button type="submit" className="btn btn-primary btn-lg" style={{ width: '100%' }} disabled={loading}>
               {loading ? <><div className="spinner spinner-sm" /> Đang đăng ký...</> : 'Đăng ký'}
             </button>
